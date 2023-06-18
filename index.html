@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Halaman Website</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background-image: url('https://i.pinimg.com/564x/8b/99/32/8b993285c42dfdcd73462668aacaad4e.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .container {
+      border: 3px solid wheat;
+      text-align: center;
+      max-width: 600px;
+      padding: 20px;
+      background-color: black;
+    }
+
+    .header {
+      background-color: dimgray;
+      padding: 10px;
+      border-radius: 5px 5px 5px 5px;
+      border-bottom: 3px solid wheat;
+      text-align: center;
+      margin-bottom: 30px;
+      color: black;
+      font-size: small;
+    }
+
+    .main-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .media-container {
+      width: 100%;
+      text-align: center;
+    }
+
+    .media-container img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+      border: 5px solid dimgray; 
+    }
+
+    .media-container p {
+      margin-bottom: 20px;
+      color: whitesmoke;
+    }
+
+    .media-container video {
+      max-width: 100%;
+      height: auto;
+      border: 5px solid dimgray; 
+    }
+
+    .survey-button {
+      text-align: center;
+      margin-top: 30px; 
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>A CULTURE OF THE SPECIAL REGION OF YOGYAKARTA</h1>
+    </div>
+
+    <div class="main-content">
+      <div class="media-container">
+        <audio src="AUDIODIY.mp3" controls></audio>
+        <p>Audio ini merupakan audio asli dari video berikut</p>
+        <video src="VIDEODIY.mp4" controls muted></video>
+        <p>Video cinematic mengenai bagaimana indah nya budaya dan pelestarian adat istiadat di Daerah Istimewa
+          Yogyakarta, Aku bangga menjadi bagian dari kota ini, merasakan budaya dan adat istiadat nya yang begitu apik, begitu
+          dikagumi oleh banyak orang</p>
+        <p>Tari Serimpi merupakan salah satu tarian daerah yang berasal dari Daerah Istimewa Yogyakarta, Mari sama-sama melestarikan kebudayan Daerah Istimewa Yogyakarta kami tercinta</p>
+        <img src="https://i.pinimg.com/564x/f0/de/76/f0de765b8a8ff07c66310845975fb6c3.jpg" alt="Deskripsi Gambar">
+      </div>
+      <div class="survey-button">
+        <a class="btn btn-primary" href="form.html">Survey</a>
+      </div>
+    </div>
+  </div>
+  <script src="form.html"></script>
+</body>
+
+</html>

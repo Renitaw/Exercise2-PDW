@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulir</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background-image: url('https://i.pinimg.com/564x/8b/99/32/8b993285c42dfdcd73462668aacaad4e.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+
+      .header {
+        background-color: dimgray;
+        padding: 10px;
+        border-radius: 5px 5px 5px 5px;
+        border-bottom: 3px solid wheat;
+        text-align: center;
+        margin-bottom: 30px;
+        color: black;
+        font-size: small;
+      }
+      
+    .form-container {
+        border: 3px solid wheat;
+        text-align: center;
+        max-width: 600px;
+        padding: 20px;
+        background-color: black;
+    }
+
+    .form-container .form-group {
+      margin-bottom: 10px;
+    }
+
+    .form-container .form-group label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .form-container .form-group :checked {
+        background-color: antiquewhite;
+    }
+
+    .form-container .form-group input,
+    .form-container .form-group select,
+    .form-container .form-group textarea {
+      width: 100%;
+    }
+
+    label
+    {
+        color: wheat;
+        text-align: left;
+    }
+    .notification-box {
+        background-color: #fff;
+        border: 2px solid green;
+        max-width: 300px;
+        padding: 10px;
+        margin: 20px auto;
+        text-align: center;
+        position: fixed;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }   
+      .result-box p {
+        color: ghostwhite;
+        box-shadow: none;
+      }
+      
+      .result-box .result-value {
+        color: ghostwhite;
+      }        
+      h2
+      {
+          color: ghostwhite;
+      }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="form-container">
+          <div class="header">
+            <h1>Form Survey</h1>
+          </div>
+          <form id="myForm">
+            <div class="form-group">
+              <label for="name">Nama:</label>
+              <input type="text" placeholder="Nama Anda" id="name" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="birthdate">Tanggal Lahir:</label>
+              <input type="date" id="birthdate" name="birthdate" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="domisili">Domisili</label>
+              <select id="domisili" name="domisili" class="form-control">
+                <option value="Bantul">Bantul</option>
+                <option value="Sleman">Sleman</option>
+                <option value="KulonProgo">Kulon Progo</option>
+                <option value="GunungKidul">Gunung Kidul</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="kebudayaan">Budaya Jogja Yang Digemari:</label>
+              <div class="form-check">
+                <input type="radio" name="kebudayaan" id="kesenian" value="Kesenian" class="form-check-input">
+                <label for="Kesenian" class="form-check-label">Kesenian</label>
+              </div>
+              <div class="form-check">
+                <input type="radio" name="kebudayaan" id="kuliner" value="Kuliner" class="form-check-input">
+                <label for="kuliner" class="form-check-label">Kuliner</label>
+              </div>
+              <div class="form-check">
+                <input type="radio" name="kebudayaan" id="objek" value="Objek" class="form-check-input">
+                <label for="objek" class="form-check-label">Objek Wisata</label>
+              </div>
+              <div class="form-check">
+                <input type="radio" name="kebudayaan" id="adat" value="Adat" class="form-check-input">
+                <label for="adat" class="form-check-label">Adat Istiadat</label>
+              </div>
+              <div class="form-check">
+                <input type="radio" name="kebudayaan" id="pakaian" value="Pakaian" class="form-check-input">
+                <label for="pakaian" class="form-check-label">Pakaian</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="address">Alamat:</label>
+              <textarea id="address" name="address" rows="3" class="form-control"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="suggestion">Ceritakan kesan dan pesan anda mengenai Jogja</label>
+              <textarea id="suggestion" name="suggestion" rows="3" class="form-control"></textarea>
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div id="result-container"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
